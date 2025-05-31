@@ -1,0 +1,29 @@
+/* CSS RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+
+/* GENERAL STYLES */
+
+body{
+  font-family:'Inter', sans-serif;
+}
+
+header{
+  width:100%;
+  height:auto;
+  background-color: white;
+}
+
+img{
+  width:50px;
+  height:50px;
+}
+
+h1{
+  font-weight:400;
+}
+
