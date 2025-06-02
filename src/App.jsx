@@ -3,20 +3,20 @@ import Main from "./components/Main";
 import React from "react";
 
 export default function App() {
+  const [isGoingOut,setIsGoingOut] = React.useState(true);
 
-  const [response,setResponse] = React.useState("Yes!");
-
-  function handleClick() {
-    setResponse("Definitely!");
+  function handleClick(){
+    setIsGoingOut(prevState => !prevState);
   }
 
   return (
     <>
       <Header />
       <Main />
-      <div className="container m-5">
-        <button onClick={handleClick} className="btn btn-outline-primary">{response}</button>
-      </div>
+      <section className="container m-5">
+        <h2>Do I feel like going out tonight?</h2>
+        <button onClick={handleClick} className="btn btn-outline-info rounded">{isGoingOut?"Yes":"No"}</button>
+      </section>
     </>
   );
 }
